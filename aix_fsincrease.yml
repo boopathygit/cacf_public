@@ -1,0 +1,9 @@
+---
+- name: increase FS in AIX
+  hosts: all
+  tasks:
+    - name: FS increase command in MB/GB
+      chfs:
+        size: 6G
+        fs_name: /var
+        action: equal_size
